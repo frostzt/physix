@@ -7,8 +7,10 @@
         "prebuild": "rimraf ./dist",
         "build": "tsc",
         "format": "prettier --write ./src/**/*",
+        "check-format": "prettier --check ./src/**/*",
         "check-types": "tsc --pretty --noEmit",
-        "check-lint": "eslint ./src/**/* --ext ts"
+        "check-lint": "eslint ./src/**/* --ext ts",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",
@@ -30,6 +32,7 @@
         "@typescript-eslint/parser": "^5.11.0",
         "eslint": "^8.8.0",
         "git-cz": "^4.8.0",
+        "husky": "^7.0.4",
         "prettier": "^2.5.1",
         "rimraf": "^3.0.2",
         "typescript": "^4.5.5"
@@ -37,6 +40,11 @@
     "config": {
         "commitizen": {
             "path": "./node_modules/git-cz"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
         }
     }
 }
