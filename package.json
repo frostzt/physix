@@ -41,10 +41,5 @@
         "commitizen": {
             "path": "./node_modules/git-cz"
         }
-    },
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "exec < /dev/tty && g cz --hook || true"
-        }
     }
 }
