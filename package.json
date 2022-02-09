@@ -1,0 +1,34 @@
+{
+  "name": "physix",
+  "version": "0.0.1",
+  "description": "A simple animation or physics library",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frostzt/physix.git"
+  },
+  "keywords": [
+    "animation",
+    "physics"
+  ],
+  "author": "frostzt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frostzt/physix/issues"
+  },
+  "homepage": "https://github.com/frostzt/physix#readme",
+  "devDependencies": {
+    "git-cz": "^4.8.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  }
+}
